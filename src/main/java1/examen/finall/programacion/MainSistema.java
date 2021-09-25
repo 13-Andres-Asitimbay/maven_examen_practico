@@ -1,5 +1,6 @@
 package examen.finall.programacion;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainSistema {
@@ -119,7 +120,11 @@ public class MainSistema {
 				}
 				
 			} else if (opcion == 4) {
-				
+				Arrays.sort(sistema);
+				for(int i = 0 ; i < 5 ; i++) {
+					System.out.println(sistema[i]);
+				}
+				System.out.println(" ");
 				
 			} else if (opcion < 1 || opcion > 5) {
 				System.out.println("Opcion invalida...");
