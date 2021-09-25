@@ -1,12 +1,12 @@
 package examen.finall.programacion;
 
-public class Poliza {
+public class Poliza implements Comparable<Poliza>{
 	
-	private String nombre;
-	private String descripcion;
-	private String añoVigencia;
-	private String codigoPoliza;
-	private int valorPoliza;
+	protected String nombre;
+	protected String descripcion;
+	protected String añoVigencia;
+	protected String codigoPoliza;
+	protected int valorPoliza;
 	
 	public String getNombre() {
 		return nombre;
@@ -46,6 +46,22 @@ public class Poliza {
 	
 	public void setValorPoliza(int valorPoliza) {
 		this.valorPoliza = valorPoliza;
+	}
+
+	@Override
+	public int compareTo(Poliza o) {
+		// TODO Auto-generated method stub
+		if (this.valorPoliza < o.getValorPoliza()) {
+			return 1;
+
+		} else if (this.valorPoliza == o.getValorPoliza()) {
+			return 0;
+
+		} else {
+			return -1;
+
+		}
+
 	}
 	
 }

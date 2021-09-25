@@ -20,5 +20,10 @@ public class PolizaGeneral extends Poliza{
 	public void setNumeroSeguro(String numeroSeguro) {
 		this.numeroSeguro = numeroSeguro;
 	}
+
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + " - Año Vigencia: " + añoVigencia + " - Código de póliza: " + codigoPoliza + " - Valor: " + valorPoliza;
+	}
 	
 }

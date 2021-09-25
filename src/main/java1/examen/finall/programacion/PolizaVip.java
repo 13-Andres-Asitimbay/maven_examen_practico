@@ -11,5 +11,10 @@ public class PolizaVip extends Poliza{
 	public void setBeneficio(String beneficio) {
 		this.beneficio = beneficio;
 	}
+
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + " - Año Vigencia: " + añoVigencia + " - Código de póliza: " + codigoPoliza + " - Valor: " + valorPoliza;
+	}
 	
 }

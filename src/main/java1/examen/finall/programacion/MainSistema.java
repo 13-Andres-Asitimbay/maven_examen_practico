@@ -48,7 +48,16 @@ public class MainSistema {
 					
 					for(int i = 0 ; i < contador ; i++) {
 						PolizaGeneral beneficiado = new PolizaGeneral();
+						beneficiado.setNombre(nombre);
+						beneficiado.setDescripcion(descripcion);
+						beneficiado.setAñoVigencia(añoVigencia);
+						beneficiado.setCodigoPoliza(codigoPoliza);
+						beneficiado.setValorPoliza(valorPoliza);
+						beneficiado.setCodigoDescuento(codigoDescuento);
+						beneficiado.setNumeroSeguro(numeroSeguro);
+						sistema[i] = beneficiado;
 					}
+					contador = contador + 1;
 					
 				} else if (opcion2.equals("b")) {
 					System.out.println("Ingrese su nombre: ");
@@ -66,15 +75,48 @@ public class MainSistema {
 					
 					for(int i = 0 ; i < contador ; i++) {
 						PolizaVip beneficiado = new PolizaVip();
+						beneficiado.setNombre(nombre);
+						beneficiado.setDescripcion(descripcion);
+						beneficiado.setAñoVigencia(añoVigencia);
+						beneficiado.setCodigoPoliza(codigoPoliza);
+						beneficiado.setValorPoliza(valorPoliza);
+						beneficiado.setBeneficio(beneficio);
+						sistema[i] = beneficiado;
 					}
+					contador = contador + 1;
 					
 				}
 				
 			} else if (opcion == 2) {
-				
+				System.out.println("Ingrese el código de la póliza: ");
+				String codigoIngresado = teclado2.nextLine();
+				for (int i = 0; i <= sistema.length; i++) {
+					Poliza poliza = sistema[i];
+					boolean encontro = poliza.getCodigoPoliza().contains(codigoIngresado);
+					if (encontro == true) {
+						System.out.println("Ingrese el nuevo código de su póliza: ");
+						String codigoPoliza2 = teclado2.nextLine();
+						poliza.setCodigoPoliza(codigoPoliza2);
+						
+					} else {
+						System.out.println("No se ha encontrado su póliza...");
+					}
+				}
 				
 			} else if (opcion == 3) {
-				
+				System.out.println("Ingrese el código de la póliza: ");
+				String codigoIngresado = teclado2.nextLine();
+				for (int i = 0; i <= sistema.length; i++) {
+					Poliza poliza = sistema[i];
+					boolean encontro = poliza.getCodigoPoliza().contains(codigoIngresado);
+					if (encontro == true) {
+						System.out.println(sistema[i]);
+						
+					} else {
+						System.out.println("No se ha encontrado su póliza...");
+						
+					}
+				}
 				
 			} else if (opcion == 4) {
 				
